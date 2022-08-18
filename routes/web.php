@@ -16,10 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/landing-page', function () {
-    return view('web.landing-page.index');
-})->name('landing.page');
-
 
 Auth::routes();
 
