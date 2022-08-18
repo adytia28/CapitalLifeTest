@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->bigInteger('phone_number')->unique();
             $table->string('city');
             $table->string('referral_code');
-            $table->text('token')->unique();
+            $table->text('token')->unique()->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

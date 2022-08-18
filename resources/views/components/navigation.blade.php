@@ -9,9 +9,18 @@
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link" href="{{route('register')}}">Register</a>
-                </li>
+                @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('article')}}">Article</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('profile')}}">Profile</a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('register')}}">Register</a>
+                    </li>
+                @endauth
             </ul>
         </div>
     </div>

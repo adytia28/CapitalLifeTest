@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class ArticlesFactory extends Factory
 {
@@ -13,9 +14,10 @@ class ArticlesFactory extends Factory
      */
     public function definition()
     {
+        $title =  $this->faker->unique()->sentence(3);
         return [
-            'title' => $this->faker->unique()->word(),
-            'slug' => $this->faker->uuid(),
+            'title' => $title,
+            'slug' => Str::slug($title),
             'thumbnail' => $this->faker->imageUrl($width = 1080, $height = 1920),
             'description' => $this->faker->paragraph(),
             'content' => $this->faker->paragraph(),
