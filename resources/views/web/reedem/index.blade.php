@@ -1,8 +1,12 @@
 @extends('layouts.app')
-@section('title', 'Article')
+@section('title', 'Profile')
 
 @section('content')
-    @livewire('web.article.detail', compact('article'))
+<div class="bg-white p-4">
+    <div>
+        <h3>Reedem Point</h3>
+    </div>
+</div>
 @endsection
 
 @section('sidebar')

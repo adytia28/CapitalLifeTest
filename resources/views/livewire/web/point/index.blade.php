@@ -2,10 +2,10 @@
     <h6 class=" fw-bold ">{{strtoupper('Informasi Point:')}}</h6>
     <div class="py-3">
         <div>
-            <span class="fw-bold text-uppercase">Point: </span><span class="pl-4">{{number_format('10000', 0, ',', '.')}}</span>
+            <span class="fw-bold text-uppercase">Point: </span><span class="pl-4">{{number_format($point, 0, ',', '.')}}</span>
         </div>
         <div>
-            <span class="fw-bold text-uppercase">Konversi Point: </span><span class="pl-4">Rp {{number_format('10000', 0, ',', '.')}}</span>
+            <span class="fw-bold text-uppercase">Konversi Point: </span><span class="pl-4">Rp {{number_format(($point * 0.0002 ), 4, ',', '.')}}</span>
         </div>
         <div>
             <span class="fw-bold text-uppercase">Expirate Date: </span><span class="pl-4">{{date('Y-m-d')}}</span>

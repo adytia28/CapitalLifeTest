@@ -20,7 +20,7 @@ class ArticlesFactory extends Factory
             'slug' => Str::slug($title),
             'thumbnail' => $this->faker->imageUrl($width = 1080, $height = 1920),
             'description' => $this->faker->paragraph(),
-            'content' => $this->faker->paragraph(),
+            'content' => $this->faker->paragraphs(2, true),
         ];
     }
 }

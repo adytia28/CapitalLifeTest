@@ -32,5 +32,5 @@
 @endsection
 
 @section('sidebar')
-    @include('web.point.index')
+    @livewire('web.point.index')
 @endsection

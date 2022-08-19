@@ -4,7 +4,7 @@
 <section class="text-center">
     <div class="card-body py-5 px-md-5">
       <div class="row d-flex justify-content-center">
-        <div class="col-lg-4 bg-white py-4 rounded-3">
+        <div class="col-lg-6 bg-white py-4 rounded-3">
           <h2 class="fw-bold mb-5">{{strtoupper('Sign up')}}</h2>
           <form class="px-4" method="POST" action="{{ route('register') }}">
             @csrf

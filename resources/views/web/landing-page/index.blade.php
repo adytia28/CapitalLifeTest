@@ -2,9 +2,11 @@
 @section('title', 'Landing Page')
 
 @section('content')
+
 <div class="bg-danger px-4">
     Column
 </div>
+
 @endsection
 
 @section('sidebar')
