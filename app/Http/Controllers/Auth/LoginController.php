@@ -52,6 +52,7 @@ class LoginController extends Controller
      */
     public function authenticate(Request $request)
     {
+        $request->phone_number =
         $credentials = $request->validate([
             'phone_number' => ['required', 'numeric'],
             'password' => ['required'],
@@ -65,6 +66,6 @@ class LoginController extends Controller
 
         return back()->withErrors([
             'phone_number' => 'The provided credentials do not match our records.',
-        ])->onlyInput('email');
+        ])->onlyInput('phone_number');
     }
 }

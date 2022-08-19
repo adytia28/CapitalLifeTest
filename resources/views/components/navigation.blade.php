@@ -16,6 +16,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('profile')}}">Profile</a>
                     </li>
+                    <li>
+                        <form method="POST" action="{{ route('logout') }}" class="+">
+                            @csrf
+
+                            <input type="submit" value="Log out" class="nav-link" style="background-color: transparent; border:none">
+                    </li>
+                    </form>
                 @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('register')}}">Register</a>

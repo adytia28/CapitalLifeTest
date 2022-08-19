@@ -26,7 +26,16 @@
             @include('components.navigation')
         </div>
         <main class="py-4" style="margin-top:120px;">
-            @yield('content')
+            <div class="container">
+                <div class="row ">
+                    <div class="@auth @if(Route::currentRouteName() == 'home') col-xl-12 @else col-xl-8 @endif @else col-xl-8 @endauth px-2 ">
+                        @yield('content')
+                    </div>
+                    <div class="col-xl-4 px-2">
+                        @yield('sidebar')
+                    </div>
+                </div>
+            </div>
         </main>
         @include('components.footer')
     </div>

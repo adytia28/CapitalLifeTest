@@ -16,8 +16,8 @@ class CreatePointsTable extends Migration
         Schema::create('points', function (Blueprint $table) {
             $table->id();
             $table->foreignId('users_id')->constrained('users')->onDelete('cascade');
-            $table->integer('points');
-            $table->date('expired_date');
+            $table->foreignId('articles_id')->constrained('articles')->onDelete('cascade');
+            $table->integer('points')->default(1);
             $table->timestamps();
         });
     }

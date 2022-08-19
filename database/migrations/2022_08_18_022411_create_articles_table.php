@@ -20,6 +20,8 @@ class CreateArticlesTable extends Migration
             $table->string('thumbnail');
             $table->text('description');
             $table->longText('content');
+            $table->boolean('type')->default(0);
+            $table->bigInteger('count')->default(0);
             $table->timestamps();
         });
     }
