@@ -11,7 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    
+
     <style>
         [x-cloak] {
             display: none !important;
@@ -33,7 +33,7 @@
         </div>
         <main class="py-4" style="margin-top:120px;">
             <div class="container">
-                <div class="row ">
+                <div class="row " x-data="{points:1}">
                     <div class="@auth @if(Route::currentRouteName() == 'home') col-xl-12 @else col-xl-8 @endif @else @if(in_array(Route::currentRouteName(), ['login', 'register'])) col-xl-12 @else col-xl-8 @endif @endauth px-2 ">
                         @yield('content')
                     </div>

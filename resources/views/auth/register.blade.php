@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title', 'Register')
 @section('content')
 <section class="text-center">
     <div class="card-body py-5 px-md-5">

@@ -15,7 +15,7 @@ class Detail extends Component
     }
 
     public function mount() {
-        $this->point = rand(50,200);
+        $this->point = rand(500,2000);
     }
 
     public function addPoint() {

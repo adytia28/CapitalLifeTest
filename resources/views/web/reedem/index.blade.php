@@ -3,12 +3,10 @@
 
 @section('content')
 <div class="bg-white p-4">
-    <div>
-        <h3>Reedem Point</h3>
-    </div>
+    @livewire('web.reedem.index')
 </div>
 @endsection
 
 @section('sidebar')
-    @livewire('web.point.index')
+@livewire('web.reedem.withdraw')
 @endsection
