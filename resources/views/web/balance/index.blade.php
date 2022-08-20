@@ -14,7 +14,7 @@
             <div class="d-flex justify-content-center pt-4">
                 <div>
                     <h2>Saldo Anda</h2>
-                    <div class="text-info" style="font-size:40px">Rp {{number_format($balance, 0, ',', '.')}}</div>
+                    <div class="text-info" style="font-size:40px">Rp {{number_format($balance, 3, ',', '.')}}</div>
                 </div>
             </div>
         </div>

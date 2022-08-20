@@ -33,9 +33,9 @@ class Withdraw extends Component
         $this->setBalance($value);
         $this->clearPoint();
 
-        $totalConvetion = $value * 0.002;
-        session()->flash('success', "Selamat, anda berhasil menukar point anda dengan uang sebesar .");
-
+        $rupiahConvert = number_format($value, 0, ',', '.');
+        $totalConvertion = number_format($value * 0.002, 3, ',', '.') ;
+        session()->flash('success', "Selamat, anda berhasil menukar {$rupiahConvert} point anda dengan uang sebesar {$totalConvertion}.");
         return redirect()->route('balance');
     }
 
