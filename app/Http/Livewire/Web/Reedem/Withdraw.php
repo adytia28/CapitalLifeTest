@@ -33,7 +33,10 @@ class Withdraw extends Component
         $this->setBalance($value);
         $this->clearPoint();
 
-        return redirect()->route('reedem');
+        $totalConvetion = $value * 0.002;
+        session()->flash('success', "Selamat, anda berhasil menukar point anda dengan uang sebesar .");
+
+        return redirect()->route('balance');
     }
 
     public function setBalance($value) {

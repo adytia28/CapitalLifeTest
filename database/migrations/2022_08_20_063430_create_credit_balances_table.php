@@ -16,7 +16,7 @@ class CreateCreditBalancesTable extends Migration
         Schema::create('credit_balances', function (Blueprint $table) {
             $table->id();
             $table->foreignId('users_id')->constrained('users')->onDelete('cascade');
-            $table->bigInteger('amount');
+            $table->decimal('amount', 13, 3);
             $table->timestamps();
         });
     }

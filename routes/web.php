@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\BalanceController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReedemController;
@@ -31,4 +32,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/article', [ArticleController::class, 'index'])->name('article');
     Route::get('/article/detail/{slug}', [ArticleController::class, 'detail'])->name('article-detail');
     Route::get('/reedem', [ReedemController::class, 'index'])->name('reedem');
+    Route::get('/balance', [BalanceController::class, 'index'])->name('balance');
 });
