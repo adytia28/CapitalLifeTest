@@ -89,7 +89,7 @@
         <div class="row ">
             <div class="col-md-4 py-2">
                 <div class="rounded-2 px-5 py-4 bg-white shadow-sm w-100 h-100 align-items-center gap-2">
-                    <img src="{{asset('img/landing/home.png')}}" class="alert alert-danger p-2 rounded-2" width="80px" height="80px"/>
+                    <img src="{{asset('img/landing/family.png')}}" class="alert alert-danger p-2 rounded-2" width="80px" height="80px"/>
                     <h5 class="fw-bolder mt-3" style="font-size:22px;">Proteksi Keluarga</h5>
                     <div class="pt-2 fw-semibold" style="margin-left:-20px">
                         <ul class="text-secondary">
@@ -117,7 +117,7 @@
             </div>
             <div class="col-md-4 py-2">
                 <div class="rounded-2 px-5 py-4 bg-white shadow-sm w-100 h-100 align-items-center gap-2">
-                    <img src="{{asset('img/landing/education.png')}}" class="alert alert-danger p-2 rounded-2" width="80px" height="80px"/>
+                    <img src="{{asset('img/landing/skin.png')}}" class="alert alert-danger p-2 rounded-2" width="80px" height="80px"/>
                     <h5 class="fw-bolder mt-3" style="font-size:22px;">Periksa Kesusaian</h5>
                     <div class="pt-2 fw-semibold" style="margin-left:-20px">
                         <ul class="text-secondary">
