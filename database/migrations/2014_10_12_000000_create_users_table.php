@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->bigInteger('identity_number')->unique()->nullable();
             $table->string('phone_number')->unique();
             $table->string('city');
-            $table->string('referral_code');
+            $table->string('referral_code')->nullable();
             $table->string('password');
             $table->timestamps();
         });

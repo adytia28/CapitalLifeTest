@@ -11,8 +11,8 @@ class Withdraw extends Component
 {
     public $points;
     public $minPoint;
-    public $alert = false;
     public $message = '';
+    public $pointId = [];
 
     public function mount() {
         $this->points = array_sum(Points::select('points')->where('users_id', auth()->id())->pluck('points')->toArray());
@@ -20,15 +20,11 @@ class Withdraw extends Component
     }
 
     public function withdraw($value) {
-        // if($this->points < $value) {
-        //     $this->alert = true;
-        //     return $this->message = 'Point yang kamu withdraw tidak bisa melebihi dari yang kamu miliki';
-        // }
+        if($this->points < $value)
+        return $this->message = 'Point yang kamu withdraw tidak bisa melebihi dari yang kamu miliki. Anda tidak diperbolehkan melakukan kecurangan';
 
-        // if($value > $this->minPoint) {
-        //     $this->alert = true;
-        //     return $this->message = 'Point kamu tidak mencukupi untuk melakukan withdraw';
-        // }
+        if($value < $this->minPoint)
+        return $this->message = 'Point kamu tidak mencukupi untuk melakukan withdraw. Silahkan tambah point anda untuk memenuhi syarat withdraw';
 
         $this->setBalance($value);
         $this->clearPoint();
@@ -47,7 +43,7 @@ class Withdraw extends Component
     }
 
     public function clearPoint() {
-        Points::where('users_id', auth()->id())->delete();
+        Points::where('users_id', auth()->id())->whereIn('id', $this->pointId)->delete();
     }
 
     public function render() {

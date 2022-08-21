@@ -44,7 +44,5 @@ class PointExpiredSchedule extends Command
         foreach($checkPoint as $point) {
             $point->delete();
         }
-
-        event(new PointExpiredEvent());
     }
 }

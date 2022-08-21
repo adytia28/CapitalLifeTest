@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Points extends Model
 {
     use HasFactory;
+
+    public function article() {
+        return $this->hasOne(Articles::class, 'id', 'articles_id');
+    }
 }

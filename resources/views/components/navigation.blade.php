@@ -16,6 +16,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('profile')}}">Profile</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('balance')}}">Balance</a>
+                    </li>
                     <li>
                         <form method="POST" action="{{ route('logout') }}" class="+">
                             @csrf
