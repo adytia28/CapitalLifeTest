@@ -24,7 +24,7 @@
 
         @if($totalPoint >= 1)
             <div class="bg-light px-4 py-4 mt-4" x-data="{pointArray:@js($points), all:false, checkAll() { if(this.all == false) {points= [];  this.pointArray.map((value) => {points.push(value.id+'|'+value.points)})} else {points = []} } }"
-                x-effect="points.length == 0 ? all = false : ''">
+                x-effect="points.length == 0 ? all = false : pointArray.length == points.length ? all = true : ''">
                 <div class="d-flex justify-content-between align-items-center">
                     <h4 class="pb-2 pt-2">List Points</h4>
                     <label for="allPoints" >

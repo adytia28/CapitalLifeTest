@@ -9,7 +9,7 @@ class ArticleController extends Controller
 {
     public function index() {
         return view('web.articles.index', [
-            'articles' => Articles::paginate(8),
+            'articles' => Articles::orderBy('id', 'DESC')->paginate(8),
         ]);
     }
 

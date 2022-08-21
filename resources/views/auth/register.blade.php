@@ -11,7 +11,7 @@
             <!-- 2 column grid layout with text inputs for the first and last names -->
             <div class="col-md-12 mb-4">
               <div class="form-outline">
-                <label class="form-label fw-bold d-flex justify-content-start" for="name">Name</label>
+                <label class="form-label fw-bold d-flex justify-content-start" for="name">Name <span class="text-danger">*</span></label>
                 <input type="text" id="name" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus/>
                 @error('name')
                     <span class="invalid-feedback d-flex justify-content-start" role="alert">
@@ -24,7 +24,7 @@
             <div class="row">
               <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <label class="form-label fw-bold d-flex justify-content-start" for="email">Email</label>
+                    <label class="form-label fw-bold d-flex justify-content-start" for="email">Email <span class="text-danger">*</span></label>
                     <input type="email" id="email" class="form-control @error('email') is-invalid @enderror"  name="email" value="{{ old('email') }}" required autocomplete="email" autofocus/>
                     @error('email')
                         <span class="invalid-feedback d-flex justify-content-start" role="alert">
@@ -34,7 +34,7 @@
                   </div>
               </div>
               <div class="col-md-6 mb-4">
-                  <label class="form-label fw-bold d-flex justify-content-start" for="email">Gender</label>
+                  <label class="form-label fw-bold d-flex justify-content-start" for="email">Gender <span class="text-danger">*</span></label>
                   <select class="form-select @error('gender') is-invalid @enderror"  name="gender" required autocomplete="gender">
                       <option value="" {{ old('gender') == '' ? 'selected' : '' }}>Select Gender</option>
                       <option value="M" {{ old('gender') == 'M' ? 'selected' : '' }}>Male</option>
@@ -51,7 +51,7 @@
             <div class="row">
               <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                      <label class="form-label fw-bold d-flex justify-content-start" for="phone_number">Phone Number</label>
+                      <label class="form-label fw-bold d-flex justify-content-start" for="phone_number">Phone Number <span class="text-danger">*</span></label>
                     <input type="text" id="phone_number" class="form-control @error('email') is-invalid @enderror" value="{{ old('phone_number') }}" name="phone_number" required autocomplete="phone_number"/>
                     @error('phone_number')
                         <span class="invalid-feedback d-flex justify-content-start" role="alert">
@@ -62,7 +62,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                      <label class="form-label fw-bold d-flex justify-content-start" for="identity_number">Identity Number</label>
+                      <label class="form-label fw-bold d-flex justify-content-start" for="identity_number">Identity Number <span class="text-danger">*</span></label>
                     <input type="text" id="identity_number" class="form-control @error('identity_number') is-invalid @enderror" value="{{ old('identity_number') }}"  name="identity_number" required autocomplete="identity_number" />
                     @error('identity_number')
                         <span class="invalid-feedback d-flex justify-content-start" role="alert">
@@ -76,7 +76,7 @@
             <div class="row">
               <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                      <label class="form-label fw-bold d-flex justify-content-start" for="city">City</label>
+                      <label class="form-label fw-bold d-flex justify-content-start" for="city">City <span class="text-danger">*</span></label>
                     <input type="text" id="city" class="form-control @error('city') is-invalid @enderror" value="{{ old('city') }}"  name="city" required autocomplete="city"/>
                     @error('city')
                         <span class="invalid-feedback d-flex justify-content-start" role="alert">
@@ -96,7 +96,7 @@
             <div class="row">
               <div class="col-md-6 mb-4">
                   <div class="form-outline mb-4">
-                      <label class="form-label fw-bold d-flex justify-content-start" for="email">Password</label>
+                      <label class="form-label fw-bold d-flex justify-content-start" for="email">Password <span class="text-danger">*</span></label>
                     <input type="password" id="password" name="password" required autocomplete="current-password" class="form-control @error('password') is-invalid @enderror" />
                     @error('password')
                         <span class="invalid-feedback d-flex justify-content-start" role="alert">
@@ -107,7 +107,7 @@
               </div>
               <div class="col-md-6 mb-4">
                   <div class="form-outline mb-4">
-                      <label class="form-label fw-bold d-flex justify-content-start" for="password_confirmation">Confirm Password</label>
+                      <label class="form-label fw-bold d-flex justify-content-start" for="password_confirmation">Confirm Password <span class="text-danger">*</span></label>
                     <input type="password" id="password_confirmation" class="form-control"  name="password_confirmation" required />
                   </div>
                 </div>

@@ -149,7 +149,7 @@
     <form method="POST" action="{{ route('login') }}">
         @csrf
         <div class="row mb-3">
-            <label for="username" class="col-md-12 col-form-label">{{ __('Username (No. Telephone)') }}</label>
+            <label for="username" class="col-md-12 col-form-label">{{ __('Username (No. Telephone)') }} <span class="text-danger">*</span></label>
 
             <div class="col-md-12">
                 <input id="phone_number" type="phone_number" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" value="{{ old('phone_number') }}" required autocomplete="phone_number" autofocus>
@@ -163,7 +163,7 @@
         </div>
 
         <div class="row mb-3">
-            <label for="password" class="col-md-12 col-form-label ">{{ __('Password') }}</label>
+            <label for="password" class="col-md-12 col-form-label ">{{ __('Password') }} <span class="text-danger">*</span></label>
 
             <div class="col-md-12">
                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">

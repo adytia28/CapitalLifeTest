@@ -17,7 +17,7 @@
                 </div>
                 <div class="px-4 py-4">
                     <h3>{{Str::limit($article->title, 15)}}</h3>
-                    <div >{{Str::limit($article->description, 75)}}</div>
+                    <div >{{Str::limit($article->description, 60)}}</div>
                     <div class="d-flex justify-content-end" style="margin-top:10px">
                         <a href="{{route('article-detail', $article->slug)}}" class="text-white btn btn-primary px-4 text-white" style="text-decoration: none">Read More</a>
                     </div>
